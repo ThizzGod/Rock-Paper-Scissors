@@ -7,7 +7,8 @@ function game() {
         console.log(counter)
         if (counter === 3) {
             alert("You win game!");
-            game();
+            counter -= counter;
+            compCounter -= compCounter;
         }
     }
     function computerWinCounter() {
@@ -15,7 +16,8 @@ function game() {
         console.log(compCounter)
         if (compCounter === 3) {
             alert("You lose game!");
-            game();
+            counter -= counter;
+            compCounter -= compCounter;
         }
     
     }
