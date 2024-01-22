@@ -5,22 +5,28 @@ function game() {
     function playerWinCounter() {
         counter++
         console.log(counter)
-        uScore.textContent = counter
+        uScore.textContent = `Player Win: ${counter}`
         if (counter === 3) {
-            alert("You win game!");
             counter -= counter;
             compCounter -= compCounter;
+            uScore.textContent = `Player Win: ${counter}`;
+            cScore.textContent = `Computer Win: ${compCounter}`;
+            alert("You win game!");
         }
+            
     }
     function computerWinCounter() {
         compCounter++
         console.log(compCounter)
-        cScore.textContent = compCounter
+        cScore.textContent = `Computer Win: ${compCounter}`
         if (compCounter === 3) {
-            alert("You lose game!");
             counter -= counter;
             compCounter -= compCounter;
+            uScore.textContent = `Player Win: ${counter}`;
+            cScore.textContent = `Computer Win: ${compCounter}`;
+            alert("You lose game!");
         }
+         
     
     }
     //for (playerWin = 0; playerWin < 5; playerWin++) {
@@ -40,7 +46,10 @@ function game() {
     const scissorsBtn = document.querySelector(".scissors")
 
     let cScore = document.querySelector(".computer-score");
-    let uScore = document.querySelector(".user-score")
+    let uScore = document.querySelector(".user-score");
+
+    uScore.textContent = `Player Win: ${counter}`;
+    cScore.textContent = `Computer Win: ${compCounter}`;
 
     rockBtn.addEventListener("click", () => {
         playGameRock()
