@@ -10,17 +10,25 @@ function game() {
         compCounter++
         console.log(compCounter)
     }
-    for (playerWin = 0; playerWin < 5; playerWin++) {
-        playGame()
-        if (counter === 3) {
+    //for (playerWin = 0; playerWin < 5; playerWin++) {
+        //playGame()
+        /* if (counter === 3) {
             alert("You win game!");
             game();
         } else if (compCounter === 3) {
             alert("You lose game!");
             game();
         }
-    }
-    console.log(playerWin)
+    } */
+
+    const rockBtn = document.querySelector(".rock");
+    const paperBtn =  document.querySelector(".paper");
+    const scissorsBtn = document.querySelector(".scissors")
+
+    rockBtn.addEventListener("click", () => {
+        let userChoice = "rock";
+        playGame()
+    })
     function getComputerChoice(max) {
         let computerChoice = Math.floor(Math.random() * max)
         return computerChoice
@@ -28,7 +36,7 @@ function game() {
     function playGame() {
         let computerChoice = getComputerChoice(3)
         console.log(computerChoice)
-        let userChoice = prompt("Rock, paper, or scissors?").toLowerCase();
+        //let userChoice = prompt("Rock, paper, or scissors?").toLowerCase();
 
         if (userChoice === "rock") { 
             if (computerChoice === 2) {
