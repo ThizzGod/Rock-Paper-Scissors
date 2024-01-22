@@ -28,6 +28,15 @@ function game() {
     rockBtn.addEventListener("click", () => {
         playGameRock()
     })
+
+    paperBtn.addEventListener("click", () => {
+        playGamePaper()
+    })
+
+    scissorsBtn.addEventListener("click", () => {
+        playGameScissors()
+    })
+
     function getComputerChoice(max) {
         let computerChoice = Math.floor(Math.random() * max)
         return computerChoice
@@ -69,4 +78,28 @@ function game() {
                 playerWin--;}
         console.log(userChoice) */
     } 
+    function playGamePaper() {
+        let computerChoice = getComputerChoice(3)
+        console.log(computerChoice)
+        if (computerChoice === 2) {
+            alert("You lose!");
+            computerWinCounter()
+        } else if (computerChoice === 1) {
+            alert("Tie");
+            //playerWin--;
+        } else {alert("You win!");
+            playerWinCounter()}
+    }
+    function playGameScissors() {
+        let computerChoice = getComputerChoice(3)
+        console.log(computerChoice)
+        if (computerChoice === 2) {
+            alert("Tie")
+            playerWin--;
+        } else if (computerChoice === 1) {
+            alert("You win!");
+            playerWinCounter()
+        } else { alert("You lose!");
+            computerWinCounter() }
+    }
 }
