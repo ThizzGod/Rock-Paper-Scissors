@@ -5,10 +5,19 @@ function game() {
     function playerWinCounter() {
         counter++
         console.log(counter)
+        if (counter === 3) {
+            alert("You win game!");
+            game();
+        }
     }
     function computerWinCounter() {
         compCounter++
         console.log(compCounter)
+        if (compCounter === 3) {
+            alert("You lose game!");
+            game();
+        }
+    
     }
     //for (playerWin = 0; playerWin < 5; playerWin++) {
         //playGame()
@@ -20,6 +29,7 @@ function game() {
             game();
         }
     } */
+
 
     const rockBtn = document.querySelector(".rock");
     const paperBtn =  document.querySelector(".paper");
@@ -95,7 +105,7 @@ function game() {
         console.log(computerChoice)
         if (computerChoice === 2) {
             alert("Tie")
-            playerWin--;
+           // playerWin--;
         } else if (computerChoice === 1) {
             alert("You win!");
             playerWinCounter()
