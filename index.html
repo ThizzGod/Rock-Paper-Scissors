@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="./scripts.js"></script>
+    <script src="./scripts.js" defer></script>
 </head>
 <body>
     <script>
         game()
         function game() {
-            /*playerWinCounter = 0
-            function playerWin() {
-                playerWinCounter++;
-            } */
             let counter = 0
             let compCounter = 0
             function playerWinCounter() {
@@ -36,13 +32,8 @@
             }
             console.log(playerWin)
             function getComputerChoice(max) {
-        /* get random integer from 0 to 2 */
                 let computerChoice = Math.floor(Math.random() * max)
                 return computerChoice
-        /* store choice inside a new variable computerChoice */
-        /* check equality with variables for rock, paper, and scissors */
-                
-        /* log result */
             }
             function playGame() {
                 let computerChoice = getComputerChoice(3)
