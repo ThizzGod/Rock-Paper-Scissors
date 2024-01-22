@@ -26,19 +26,18 @@ function game() {
     const scissorsBtn = document.querySelector(".scissors")
 
     rockBtn.addEventListener("click", () => {
-        let userChoice = "rock";
-        playGame()
+        playGameRock()
     })
     function getComputerChoice(max) {
         let computerChoice = Math.floor(Math.random() * max)
         return computerChoice
     }
-    function playGame() {
+    function playGameRock() {
         let computerChoice = getComputerChoice(3)
         console.log(computerChoice)
         //let userChoice = prompt("Rock, paper, or scissors?").toLowerCase();
 
-        if (userChoice === "rock") { 
+        //if (userChoice === "rock") { 
             if (computerChoice === 2) {
                 alert("You win!");
                 playerWinCounter()
@@ -46,8 +45,9 @@ function game() {
                 alert("You lose!");
                 computerWinCounter()
             } else { alert("Tie");
-                    playerWin-- ;}
-        } else if (userChoice === "paper") {
+                    //playerWin-- ;
+                }
+        /* } else if (userChoice === "paper") {
             if (computerChoice === 2) {
                 alert("You lose!");
                 computerWinCounter()
@@ -67,6 +67,6 @@ function game() {
                 computerWinCounter() }
         } else {alert ("Invalid choice");
                 playerWin--;}
-        console.log(userChoice)
-    }
+        console.log(userChoice) */
+    } 
 }
